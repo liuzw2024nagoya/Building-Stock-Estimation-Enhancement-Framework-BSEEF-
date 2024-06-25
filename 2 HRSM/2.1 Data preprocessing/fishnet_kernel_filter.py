@@ -76,9 +76,6 @@ def calculate_prewitt(row_id, column_id, data_dict):
 
 # Calculate the Laplacian Operator
 def calculate_laplacian(row_id, column_id, data_dict):
-    """
-    计算 Laplacian 算子。
-    """
     laplacian_kernel = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     center_value = data_dict.get((row_id, column_id), 0)
     laplacian_sum = -4 * center_value
