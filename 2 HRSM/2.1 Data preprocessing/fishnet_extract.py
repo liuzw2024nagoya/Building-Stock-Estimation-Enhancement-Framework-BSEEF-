@@ -66,8 +66,8 @@ def main():
             letters = ''.join(filter(str.isalpha, page_name))
             numbers = ''.join(filter(str.isdigit, page_name))
 
-            row[1] = calculate_row(letters)  # 计算 rowID
-            row[2] = int(numbers) if numbers else 0  # 提取并转换 columnID 的值
+            row[1] = calculate_row(letters)  # Calculate rowID
+            row[2] = int(numbers) if numbers else 0  # Extract and convert columnID
 
             cursor.updateRow(row)
     print("Updated cursor.")
